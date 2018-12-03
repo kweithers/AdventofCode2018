@@ -23,6 +23,11 @@ for j in squares:
         for l in range(int(j[1]),int(j[1])+int(j[3])):
             fabric_matrix[k,l] +=1
             
-target = (fabric_matrix == 1).sum()
-
-[ i[4] for i in squares if int(i[2])*int(i[3]) == target ]
+for j in squares:
+    temp_sum = 0
+    for k in range(int(j[0]),int(j[0])+int(j[2])):
+        for l in range(int(j[1]),int(j[1])+int(j[3])):
+            temp_sum += fabric_matrix[k,l]
+    if temp_sum == int(j[2])*int(j[3]):
+        print j[4]
+        break
