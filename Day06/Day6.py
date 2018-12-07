@@ -97,5 +97,3 @@ def make_grid2(points):
 
 y = make_grid2(content)
 print(y)
-
-
