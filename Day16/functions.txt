@@ -1,0 +1,67 @@
+regsiter = [0,0,0,0]
+
+def addr(instructions,reg):
+    reg[instructions[3]] = reg[instructions[1]] + reg[instructions[2]]
+
+def addi(instructions,reg):
+	reg[instructions[3]] = reg[instructions[1]] + instructions[2]
+
+def mulr(instructions,reg):
+    reg[instructions[3]] = reg[instructions[1]] * reg[instructions[2]]
+
+def muli(instructions,reg):
+	reg[instructions[3]] = reg[instructions[1]] * instructions[2]
+
+def banr(instructions,reg):
+    reg[instructions[3]] = reg[instructions[1]] & reg[instructions[2]]
+
+def bani(instructions,reg):
+	reg[instructions[3]] = reg[instructions[1]] & instructions[2]
+
+def borr(instructions,reg):
+    reg[instructions[3]] = reg[instructions[1]] | reg[instructions[2]]
+
+def bori(instructions,reg):
+	reg[instructions[3]] = reg[instructions[1]] | instructions[2]
+
+def setr(instructions,reg):
+    reg[instructions[3]] = reg[instructions[1]]
+
+def seti(instructions,reg):
+	reg[instructions[3]] = instructions[1]
+
+def gtir(instructions,reg):
+	if instructions[1] > reg[instructions[2]]
+		reg[instructions[3]] = 1
+	else:
+		reg[instructions[3]] = 0
+
+def gtri(instructions,reg):
+	if reg[instructions[1]] > instructions[2]
+		reg[instructions[3]] = 1
+	else:
+		reg[instructions[3]] = 0
+
+def gtrr(instructions,reg):
+	if reg[instructions[1]] > reg[instructions[2]]
+		reg[instructions[3]] = 1
+	else:
+		reg[instructions[3]] = 0
+
+def eqir(instructions,reg):
+	if instructions[1] == reg[instructions[2]]
+		reg[instructions[3]] = 1
+	else:
+		reg[instructions[3]] = 0
+
+def eqri(instructions,reg):
+	if reg[instructions[1]] == instructions[2]
+		reg[instructions[3]] = 1
+	else:
+		reg[instructions[3]] = 0
+
+def eqrr(instructions,reg):
+	if reg[instructions[1]] == reg[instructions[2]]
+		reg[instructions[3]] = 1
+	else:
+		reg[instructions[3]] = 0
